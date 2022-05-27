@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+*  {margin:0; padding:0; box-sizing:border-box;}
+html, body {font:10pt/180% "나눔고딕","맑은 고딕"; color:#222328;}
+
+#layout {width:1000px; height:650px; margin:auto; overflow:hidden; display:flex; position:relative;}
+
+
+/*  왼쪽  */
+#left {width:200px;}
+
+/*  로고  */
+#left> a {margin-top:20px; display:block;}
+
+#left> nav {margin-top:20px;}
+#left nav a {display:block; text-decoration:none; text-align:center;}
+
+/*  메인메뉴  */
+nav li:not(:first-child) {border-top:1px solid #c26856;}
+nav li>a {background:#dfc5b8; color:#ac3606; font-size:1.2rem; font-weight:bold; padding:10px;}
+
+/*  메인메뉴 호버  */
+nav li>a:hover {background:#ac3606; color:#dfc5b8;}
+
+/*  하위메뉴  */
+nav nav {background:#e2d7d0; padding:5px; padding-bottom:10px; display:none;}
+nav nav a {padding:6px; color:#a55a3c; font-size:1.1rem;}
+
+/*  하위메뉴 호버  */
+nav nav a:hover {background:#ab6c52; color:#e2d7d0; font-weight:bold;}
+
+/*  오른쪽  */
+#right {width:800px;}
+
+/*  슬라이드 (페이드방식)  */
+#slide {position:relative; height:350px;}
+#slide a {position:absolute;}
+
+/*  메인  */  
+main {display:flex; height:200px; padding-top:30px; overflow:hidden;}
+
+/*  공지사항과 갤러리 h2를 공통디자인  */
+main h2 {background:#b68121; color:white; font-size:1.1rem; display:inline-block; padding:2px 7px;}
+
+/*h2밑에 가로선 아래방향에 여백설정*/
+hr {margin-bottom:12px;}
+
+/*  공지사항  */
+#notice {flex:1.2; margin-right:40px;}
+#notice ul {list-style:none;}
+#notice a {color:#222328; text-decoration:none;}
+#notice a:hover {color:#b68121; text-decoration:underline;}
+
+/*  span은 부모인 li의 오른쪽 끝으로 이동한다  */
+#notice span {float:right;}
+
+/*  갤러리  */
+#gallery {flex:1.1; margin-right:15px;}
+#gallery div {display:flex; justify-content:space-between;}
+
+/*  바로가기  */
+#banner {flex:1; text-align:right;}
+#banner h2 {display:none;}
+
+/*  하단  */
+footer {display:flex; height:100px; overflow:hidden; background:#eee; align-items:center; padding:10px;}
+footer> p {flex:1;}
+
+/*  SNS 아이콘  */
+footer img {width:35px; border-radius:5px;}
+
+/*  팝업  */
+#popup {position:absolute; top:30%; left:37%; background:white; padding:20px; border-radius:10px; box-shadow:1px 1px 5px rgba(0,0,0,0.5); display:none;}
+#popup p {margin:10px 0 100px 0;}
+#popup button {float:right;}
